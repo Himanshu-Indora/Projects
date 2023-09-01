@@ -1,0 +1,551 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800;900&display=swap');
+
+:root{
+    --white: white;
+    --black:black;
+    --orange:#ffa500;
+    --lightblack:rgb(28, 28, 28);
+    --shadow: #474141;
+    --lightgrey: #b7b7b7;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color: var(--white); 
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background: var(--black);
+    overflow-x: hidden;
+}
+button{
+    background: var(--orange);
+    border: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav{
+    height: 60px;
+    width: 100%;
+    font-family: 'Itim';
+    padding: 0px 20px;
+    box-shadow: 0 10px 10px var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    background: var(--black);
+    z-index: 999;
+}
+header nav h1{
+    font-size: 6.5vmin;
+    color: var(--orange);
+}
+header nav ul{
+    font-size: 1.6vmax;
+    display: flex;
+    list-style-type: none ;
+    gap: 4vw;
+}
+header nav ul li a{
+    text-decoration: none;
+    position: relative;
+}
+header nav a:hover{
+    color: var(--orange);
+}
+header nav a::before{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--orange);
+    position: absolute;
+    bottom:-2px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.8s ease-in-out;
+}
+header nav a:hover::before{
+    transform: scaleX(1);
+    
+}
+header nav div{
+    display: flex;
+    gap: 2vw;
+}
+header nav button{
+    width: 70px;
+    padding: 6px 8px;
+    border-radius: 20px;
+}
+header nav button i{
+    color: var(--black);
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 8px;
+}
+header nav .menu{
+    display: none;
+    color: var(--orange);
+}
+.menuclose{
+    display: none;
+}
+.main1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    gap: 8vw;
+    margin-top: 120px;
+}
+.main1 pre{
+    font-size: 4.5vmax;
+    font-weight: 900;
+    font-family: 'Inter';
+}
+.main1 img{
+    width: clamp(250px,50%,550px);
+    filter: drop-shadow(10px 10px 6px var(--orange));
+}
+.main1 span{
+    color: var(--orange);
+}
+#explore1{
+    background: var(--black);
+    font-size: 1.4vw;
+    position: relative;
+    top: -80px;
+    left: 15vw;
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px var(--shadow);
+    color: var(--orange);
+}
+#explore1:hover{
+    color: var(--black);
+    box-shadow: 0 0 10px 10px var(--orange);
+    background: var(--orange);
+    transition: 0.8s ease-in-out;
+}
+.main2{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4%;
+}
+.main2 div{
+    width: 20%;
+    padding: 2vw 0px;
+    background: var(--lightblack);
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center ;
+    font-family: 'Inter';
+    gap: 16px;
+    box-shadow: 0 0 10px 10px var(--shadow);
+    margin: 30px 0px;
+}
+.main2 div img{
+    width: 50px;
+}
+.main2 div h4{
+    font-size: 1.7vw;
+    font-weight: 600;
+}
+.main2 div p{
+    font-size: 1.4vw;
+    color: var(--lightgrey);
+}
+.heading{
+    margin-top: 4vmax;
+    font-size: 3vw;
+    font-family: 'Inter';
+    font-weight: 600 ;
+    text-align: center;
+    color: var(--orange);
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    gap: 6vw;
+    margin-top: 4vmax;
+}
+.about img{
+    width: clamp(200px, 45% , 550px);
+    filter: drop-shadow(-8px 10px 6px var(--orange));
+}
+.about div{
+    width: 45%;
+}
+.about div h4{
+    width: 80%;
+    font-size: 2.5vw;
+}
+.about div p{
+    width: 80%;
+    font-size:1.6vw ;
+    color: var(--lightgrey);
+}
+.about-content button{
+    font-size: 1.4vw;
+    margin: 0px auto;
+    position: relative;
+    top:5vw;
+    transform: translateX(-100%);
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 10px var(--shadow);
+    color: var(--orange);
+    background: var(--black);
+}
+.about-content button:hover{
+    color: var(--black);
+    box-shadow: 0 0 10px 10px var(--orange);
+    background: var(--orange);
+    transition: 0.8s ease-in-out;
+}
+.items{
+    width: 100%;
+    margin-top: 6vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0px 2vw;
+}
+.items .item-list{
+    width: 20%;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 10px var(--shadow) ;
+    margin-bottom: 60px;
+
+}
+.items div .product{
+    width: 100%;
+    position: relative;
+    top: -30px;
+    filter: drop-shadow(0 0 20px var(--orange));
+}
+.items div .heart{
+    position: relative;
+    top: 1.5vmax;
+    left: 1.5vmax;
+}
+.item-list h2{
+       text-align: center;
+       font-size: 1.8vw;
+       position: relative;
+       top: -60px;
+}
+.item-list p{
+    text-align:center;
+    font-size: 1.6vw;
+    color: var(--lightgrey);
+    padding: 0 16px;
+    position: relative;
+    top: -50px;
+}
+.item-list div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+    position: relative;
+    top: -20px;
+}
+.item-list span{
+    font-size: 1.6vw;
+    font-weight: bold;
+    color: var(--orange);
+}
+.item-list button{
+    padding: 2px 10px;
+    border-radius:20px;
+    font-size: 1.3vw ;
+    color: var(--orange);
+    box-shadow: 0 0 10px 6px var(--shadow) ;
+    background: var(--black); 
+}
+.item-list button:hover{
+    color: var(--black);
+    background: var(--orange);
+    box-shadow: 0 0 10px 10px var(--orange) ;
+    transition: 0.8s ease-in-out;
+}
+.main3{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+    margin: 6vw 3vw;
+}
+.main3 .reviews{
+    width: 25%;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 10px var(--shadow);
+}
+.main3 div p{
+    margin: 26px;
+    text-align: center;
+    font-size: 1.4vw;
+}
+.reviews div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 20px;
+    gap: 30px;
+}
+.reviews ul{
+    list-style-type: none;
+    line-height: 26px;
+}
+.reviews div ul li:first-child{
+    font-size: 1.8vw;
+    font-weight: bold;
+    font-family: 'Inter';
+}
+.reviews div ul li:nth-child(2){
+    font-size: 1.4vw;
+    color: var(--lightgrey);
+}
+.reviews div ul li:last-child{
+    font-size: 3vmin;
+}
+.reviews img{
+    width: 60px;
+    border-radius: 50%;
+}
+.social-links{
+    margin-top:3vw ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+}
+.social-links img{
+    width:30px;
+}
+.details{
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 3vw;
+    font-size:1.5vw ;
+}
+.details .span{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 4px;
+}
+.details i{
+    color: var(--orange);
+}
+
+
+
+
+
+
+@media (max-width:1024px) and (min-width:600px){
+    header nav ul{
+        font-size: 2vmax;
+    }
+    #explore1{
+        font-size: 2vw;
+    }
+    .main2 div{
+        width: 50%;
+    }
+    .main2 div img{
+        width: 60px;
+    }
+    .main2 div h4{
+        font-size: 2vw;
+    }
+    .about div h4{
+        font-size: 3.4vw;
+    }
+    .about div p{
+        font-size:2vw ;
+    }
+    .about-content button{
+        font-size: 2vw;
+    }
+    .items .item-list{
+        width: 35% ;
+    }
+    .item-list h2{
+        font-size: 2.4vw;
+    }
+    .item-list p{
+        font-size: 2vw;
+    }
+    .item-list span{
+        font-size: 2.2vw;
+    }
+    .item-list button{
+        font-size: 2vw;
+    }
+    .main3 .reviews{
+        width: 45%;
+        margin: 20px 4vw;
+    }
+    .main3 div p{
+        font-size:1.8vw ;
+    }
+    .reviews ul{
+        line-height: 20px;
+    }
+}
+
+
+@media (max-width:599px){
+    #home{
+        margin-top: 120px;
+    }
+    header nav h1{
+        font-size: 4.5vmax;
+    }
+    header nav ul{
+        width: 100%;
+        display: none;
+        font-size: 3.5vmax;
+        background: var(--lightblack);
+        line-height: 40px;
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        padding: 40px;
+        border-radius: 0 0 60px 60px;
+        box-shadow: 0 10px 10px var(--shadow);
+    }
+    .menuclose{
+        color: var(--orange);
+        display: block;
+        position: relative;
+        font-size: 30px;
+        font-weight: 600;
+        left: 80%;
+        padding: 20px;
+    }
+    header nav .menu{
+        display: block;
+        font-size: 24px;
+        font-weight: 600 ;   
+    }
+    header nav .menu.remove{
+        display: none;
+    }
+    header nav ul.open{
+        display: block;
+    }
+    .main1{
+        margin-top: 6vmax;
+    }
+    .main1 pre{
+        margin:  0 auto;
+        font-size: 8vw;
+        width: 70%;
+    }
+    #explore1{
+        font-size: 3vw;
+        top: 20px;
+        left: 50%;
+        transform: translate( -50%, -50%) ;
+    }
+    .main2 div{
+        width: 50%;
+    }
+    .main2 div img{
+        width: 40px;
+    }
+    .main2 div h4{
+        font-size: 4vw;
+    }
+    .main2 div p{
+        font-size: 3vw;
+    }
+    .heading{
+        font-size: 5vw;
+    }
+    .about img{
+        width: clamp(200px, 50% , 550px);
+    }
+    .about div{
+        width: 80%;
+    }
+    .about div h4{
+        width: 100%;
+        text-align: center;
+        font-size: 4.2vw;
+    }
+    .about div p{
+        width: 100%;
+        text-align: justify;
+        font-size: 3vw;
+    }
+    .about-content button{
+        font-size: 3vw;
+        top: 20px;
+        transform: translateX(0) ;
+    }
+    .ourshop{
+        margin-top: 10vmax ;
+    }
+    .items .item-list{
+        width: 70%;
+    }
+    .items div .heart{
+        top: 2vmax;
+        left: 2vmax;
+    }
+    .item-list h2{
+        font-size: 4.6vw;
+    }
+    .item-list p{
+        font-size: 4vw;
+    }
+    .item-list span{
+        font-size: 4vw;
+    }
+    .item-list button{
+        font-size: 3.8vw;
+    }
+    .reviews ul{
+        line-height: 3.8vw;
+    }
+    .main3 .reviews{
+        width: 70%;
+        margin: 4vw;
+    }
+    .main3 div p{
+        font-size: 3.6vw;
+    }
+    .reviews div ul li:first-child{
+        font-size: 3.4vw;
+    }
+    .reviews div ul li:nth-child(2){
+        font-size: 2.8vw;
+    }
+    .social-links img{
+        width: 4vw;
+    }
+    .details .span{
+        width: 100%;
+        font-size: 2.3vw;
+    }
+}
